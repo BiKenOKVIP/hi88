@@ -1,5 +1,6 @@
 import Banner from "~/components/Banner";
 import Header from "~/components/Header";
+import Navigate from "~/components/Navigate";
 import Notify from "~/components/Notify";
 import Section from "~/components/Section";
 
@@ -10,6 +11,7 @@ function Home() {
       <Banner />
       <Notify />
       <Section />
+      <Navigate />
     </div>
   );
 }

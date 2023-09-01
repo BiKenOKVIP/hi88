@@ -1,4 +1,3 @@
-import { Button } from "antd";
 import { Link } from "react-router-dom";
 
 function Section() {
@@ -29,7 +28,7 @@ function Section() {
                 src="./images/choi-thu.png"
                 alt="Chơi thử"
               />
-              <span className="text-[#ff0] text-[0.55rem] uppercase">
+              <span className="font-[700] text-[#ff0] text-[0.54rem] uppercase">
                 Chơi thử
               </span>
             </Link>
@@ -41,7 +40,7 @@ function Section() {
                 src="./images/nhan-thuong.png"
                 alt="Nhận thưởng"
               />
-              <span className="text-[#ff0] text-[0.55rem] uppercase">
+              <span className="font-[700] text-[#ff0] text-[0.54rem] uppercase">
                 Nhận thưởng
               </span>
             </Link>
@@ -53,7 +52,7 @@ function Section() {
                 src="./images/quan-tam.png"
                 alt="Quan tâm"
               />
-              <span className="text-[#ff0] text-[0.55rem] uppercase">
+              <span className="font-[700] text-[#ff0] text-[0.54rem] uppercase">
                 Quan tâm
               </span>
             </Link>

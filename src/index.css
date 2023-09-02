@@ -96,7 +96,7 @@
 
 .ant-drawer-header-title {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .ant-menu-item {

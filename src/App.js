@@ -3,7 +3,7 @@ import { publicRoutes } from "~/routes";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/hi88-mb">
       <div style={{ display: "flex", height: "100%" }}>
         <Routes>
           {publicRoutes.map((route, index) => {

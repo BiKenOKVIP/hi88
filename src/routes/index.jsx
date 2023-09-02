@@ -3,7 +3,7 @@ import NotFound from "~/pages/NotFound";
 
 const publicRoutes = [
   { path: "/hi88-mb/", component: Home },
-  { path: "/hi88-mb/*", component: NotFound },
+  { path: "*", component: NotFound },
 ];
 
 const privateRoutes = [];

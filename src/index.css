@@ -59,14 +59,26 @@
 .swiper-slide:last-child {
   margin-right: 14px;
 }
-/* 
-.swiper-wrapper {
-  margin: 0 14px;
-} */
+
 .bg-active-navbar {
   background: linear-gradient(to bottom, #02a9dd, #0278dc);
 }
 
 .ant-tabs-nav {
   margin: 0 !important;
+}
+
+.bg-main-menu {
+  background: linear-gradient(to bottom, #02a9dd 20%, #0278dc);
+}
+
+.bg-active {
+  background: #02a9dd;
+}
+
+.bg-footer {
+  background: url(../public/images/footer-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

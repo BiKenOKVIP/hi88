@@ -67,7 +67,7 @@ function Navigate() {
       >
         <div className="w-[94%] overflow-hidden">
           {listNavbarItems.map((item, index) => (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <div
                 className={`h-full flex flex-col items-center justify-center ${
                   parseInt(activeTab) === index + 1 && "bg-active-navbar"

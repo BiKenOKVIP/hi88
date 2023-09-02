@@ -4,16 +4,16 @@ import { useState } from "react";
 
 function Header() {
   const [open, setOpen] = useState(false);
-
   const showDrawer = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
   };
+
   let isInline = true;
   return (
-    <>
+    <div>
       <div className="bg-[#F5F4F2] fixed top-0 left-0 z-50 w-full h-[48px] flex justify-between items-center px-2">
         <Button
           className="shadow-none outline-0 outline-none border-0 text-primary text-[25px] h-full flex items-center"
@@ -111,7 +111,7 @@ function Header() {
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

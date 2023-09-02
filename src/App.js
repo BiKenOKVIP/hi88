@@ -8,7 +8,7 @@ import { publicRoutes } from "~/routes";
 
 function App() {
   return (
-    <Router basename="/hi88-mb/">
+    <Router>
       <div style={{ display: "flex", height: "100%" }}>
         <Routes>
           {/* Đặt trang mặc định */}

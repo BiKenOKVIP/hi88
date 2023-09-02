@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function NotFound() {
+  window.location.href = "/hi88-mb/"; // Thay đổi '/hi88-mb/' thành basename của bạn
   return (
     <div className="py-[20%] px-10 flex items-center flex-col absolute top-0 bottom-0 left-0 right-0 bg-notfound">
       <img src="./images/notfound-logo.png" alt="Logo" />

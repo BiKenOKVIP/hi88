@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "~/routes";
 
 function App() {
@@ -11,8 +6,6 @@ function App() {
     <Router>
       <div style={{ display: "flex", height: "100%" }}>
         <Routes>
-          {/* Đặt trang mặc định */}
-          <Route path="/" element={<Navigate to="/hi88-mb/" />} />
           {publicRoutes.map((route, index) => {
             const Page = route.component;
             return <Route key={index} path={route.path} element={<Page />} />;

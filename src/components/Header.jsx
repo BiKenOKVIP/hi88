@@ -1,6 +1,13 @@
 import { Button, Drawer, Menu } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import {
+  BookFilled,
+  HomeFilled,
+  MenuOutlined,
+  MoneyCollectFilled,
+  QuestionCircleFilled,
+} from "@ant-design/icons";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -10,6 +17,36 @@ function Header() {
   const onClose = () => {
     setOpen(false);
   };
+
+  // Sử dụng useState để lưu trữ thời gian hiện tại
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  // Sử dụng useEffect để cập nhật thời gian liên tục
+  useEffect(() => {
+    // Tạo một interval để cập nhật thời gian mỗi giây
+    const interval = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+
+    // Xóa interval khi component unmount để tránh memory leaks
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  // Lấy thứ, ngày, tháng, năm và thời gian từ currentDateTime
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  };
+  const formattedDateTime = currentDateTime.toLocaleDateString(
+    "vi-VN",
+    options
+  );
 
   let isInline = true;
   return (
@@ -22,35 +59,103 @@ function Header() {
           <MenuOutlined />
         </Button>
         <Drawer
-          headerStyle={{ display: "none" }}
+          headerStyle={{
+            backgroundColor: "#0278DC",
+            display: "flex",
+            alignItems: "center",
+            height: "7vh",
+            border: 0,
+          }}
+          closeIcon={
+            <span
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#fff",
+                borderRadius: "50%",
+                color: "#0278DC",
+                width: "25px",
+                height: "25px",
+              }}
+            >
+              X
+            </span>
+          }
           bodyStyle={{
             padding: 0,
             height: "100%",
-            background: "#000",
+            background: "#02A9DD",
             textTransform: "uppercase",
             fontWeight: "bold",
-            textAlign: "center",
           }}
-          width="80%"
+          width="60%"
           onClose={onClose}
           open={open}
           placement="left"
         >
+          <div className="text-center capitalize bg-[#0278DC] text-white text-[0.75rem] pb-2 font-[400]">
+            <p>{formattedDateTime}</p>
+          </div>
           <Menu
-            className="bg-[#000] text-[#FF9900] pt-10"
+            className="bg-primary text-white font-[400]"
             mode={isInline ? "inline" : "horizontal"}
             items={[
               {
-                key: "news",
-                label: <a href="/">Tin tức</a>,
+                key: "home",
+                label: (
+                  <div>
+                    <HomeFilled
+                      className="w-8"
+                      style={{ fontSize: "1.2rem" }}
+                    />
+                    <a href="/">trang chủ</a>
+                  </div>
+                ),
               },
-              { key: "about", label: <a href="/">Về chúng tôi</a> },
-              { key: "contact", label: <a href="/">Liên hệ</a> },
+              {
+                key: "discount",
+                label: (
+                  <div>
+                    <MoneyCollectFilled
+                      className="w-8"
+                      style={{ fontSize: "1.2rem" }}
+                    />
+                    <a href="/">kênh khuyến mãi</a>
+                  </div>
+                ),
+              },
+              {
+                key: "guideNew",
+                label: (
+                  <div>
+                    <BookFilled
+                      className="w-8"
+                      style={{ fontSize: "1.2rem" }}
+                    />
+                    <a href="/">hướng dẫn người mới</a>
+                  </div>
+                ),
+              },
+              {
+                key: "guide",
+                label: (
+                  <div>
+                    <QuestionCircleFilled
+                      className="w-8"
+                      style={{ fontSize: "1.2rem" }}
+                    />
+                    <a href="/">hướng dẫn nạp rút</a>
+                  </div>
+                ),
+              },
             ]}
           />
         </Drawer>
         <div className="text-center h-full flex items-center">
-          <img className="h-[100%]" src="./images/logo.png" alt="Logo" />
+          <Link className="h-[100%]" to="/">
+            <img className="h-[100%]" src="./images/logo.png" alt="Logo" />
+          </Link>
         </div>
         <div className="w-[30px] px-8 pl-[1rem]">
           <svg

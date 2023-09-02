@@ -8,15 +8,6 @@ import Section from "~/components/Section";
 import Footer from "~/components/Footer";
 
 function Home() {
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("http://localhost:3000/hot-nhat")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data));
-  // }, []);
-
-  // console.log(data);
   return (
     <div className="w-full">
       <Header />

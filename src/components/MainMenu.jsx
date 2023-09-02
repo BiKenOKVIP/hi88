@@ -106,7 +106,7 @@ function MainMenu() {
     setActiveTab(key);
   };
   return (
-    <div className="fixed bottom-0 left-0 right-0 h-[10vh] bg-main-menu">
+    <div className="custom-box-shadow fixed bottom-0 left-0 right-0 h-[10vh] bg-main-menu">
       <ul className="flex h-full items-center justify-between">
         {listMenuItems.map((item, index) => (
           <li

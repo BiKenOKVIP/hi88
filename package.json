@@ -2,6 +2,7 @@
   "name": "hi88",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://bikenokvip.github.io/hi88-mb",
   "dependencies": {
     "@ant-design/icons": "^5.2.5",
     "@testing-library/jest-dom": "^5.14.1",
@@ -20,7 +21,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d deploy"
   },
   "eslintConfig": {
     "extends": [

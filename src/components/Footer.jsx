@@ -43,7 +43,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex mt-4">
-          <div className="w-[61%] mr-[50px]">
+          <div className="w-[45%] mr-[50px]">
             <h2 className="mb-2 text-primary text-[0.9rem] capitalize">
               Theo dõi chúng tôi
             </h2>

@@ -47,7 +47,7 @@ function Footer() {
             <h2 className="mb-2 text-primary text-[0.9rem] capitalize">
               Theo dõi chúng tôi
             </h2>
-            <div className="w-[40%] flex w-full items-center justify-between">
+            <div className="w-[68%] flex items-center justify-between">
               <Link to="/">
                 <img
                   className="w-6 h-6"

@@ -109,7 +109,7 @@ function Header() {
                       className="w-8"
                       style={{ fontSize: "1.2rem" }}
                     />
-                    <a href="/h">trang chủ</a>
+                    <a href="/hi88-mb/f">trang chủ</a>
                   </div>
                 ),
               },
@@ -121,7 +121,7 @@ function Header() {
                       className="w-8"
                       style={{ fontSize: "1.2rem" }}
                     />
-                    <a href="/h">kênh khuyến mãi</a>
+                    <a href="/hi88-mb/a">kênh khuyến mãi</a>
                   </div>
                 ),
               },

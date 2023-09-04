@@ -68,7 +68,7 @@ function Content({ tab }) {
         </ul>
       ) : isLoading ? (
         <div className="text-center p-10">
-          <Spin></Spin>
+          <Spin size="large"></Spin>
         </div>
       ) : (
         <div className="bg-footer text-center py-10 font-bold">

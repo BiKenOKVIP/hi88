@@ -13,8 +13,8 @@ function Home() {
       <Banner />
       <Notify />
       <Section />
-      <Navigate />
 
+      <Navigate />
       <MainMenu />
     </div>
   );

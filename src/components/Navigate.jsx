@@ -88,46 +88,20 @@ function Navigate() {
           ))}
         </div>
       </Swiper>
-
-      <Tabs
-        activeKey={activeTab}
-        onChange={handleTabChange}
-        centered
-        items={[
-          {
-            key: "1",
-            children: <Content />,
-          },
-          {
-            key: "2",
-            children: <Content />,
-          },
-          {
-            key: "3",
-            children: "Content of Tab 3",
-          },
-          {
-            key: "4",
-            children: "Content of Tab 4",
-          },
-          {
-            key: "5",
-            children: "Content of Tab 5",
-          },
-          {
-            key: "6",
-            children: "Content of Tab 6",
-          },
-          {
-            key: "7",
-            children: "Content of Tab 7",
-          },
-          {
-            key: "8",
-            children: "Content of Tab 8",
-          },
-        ]}
-      ></Tabs>
+      {listNavbarItems.map((item, index) => (
+        <Tabs
+          key={index}
+          activeKey={activeTab}
+          onChange={handleTabChange}
+          centered
+          items={[
+            {
+              key: (index + 1).toString(),
+              children: <Content tab={index + 1} />,
+            },
+          ]}
+        ></Tabs>
+      ))}
       <Footer />
     </div>
   );

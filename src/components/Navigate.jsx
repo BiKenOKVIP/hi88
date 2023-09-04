@@ -5,6 +5,8 @@ import "swiper/css";
 
 import "swiper/css/navigation";
 import { useState } from "react";
+import Content from "./Content";
+import Footer from "./Footer";
 
 function Navigate() {
   const listNavbarItems = [
@@ -41,7 +43,6 @@ function Navigate() {
       name: "đá gà",
     },
   ];
-
   const [activeTab, setActiveTab] = useState("1");
 
   const handleTabChange = (key) => {
@@ -89,18 +90,17 @@ function Navigate() {
       </Swiper>
 
       <Tabs
-        className=""
         activeKey={activeTab}
         onChange={handleTabChange}
         centered
         items={[
           {
             key: "1",
-            children: "Content of Tab 1",
+            children: <Content />,
           },
           {
             key: "2",
-            children: "Content of Tab 2",
+            children: <Content />,
           },
           {
             key: "3",
@@ -128,6 +128,7 @@ function Navigate() {
           },
         ]}
       ></Tabs>
+      <Footer />
     </div>
   );
 }

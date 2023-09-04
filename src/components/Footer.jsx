@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="p-3 mt-5 bg-footer mb-[12vh]">
+    <div className="p-3 mt-1 bg-footer mb-[12vh]">
       <div className="flex items-center">
-        <div className="w-[60%]  text-primary">
+        <div className="w-[60%] text-primary">
           <h2 className="font-bold text-[1rem]  capitalize">
             Đối tác chính thức
           </h2>

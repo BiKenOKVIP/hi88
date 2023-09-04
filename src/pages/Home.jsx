@@ -5,7 +5,6 @@ import Header from "~/components/Header";
 import Navigate from "~/components/Navigate";
 import Notify from "~/components/Notify";
 import Section from "~/components/Section";
-import Footer from "~/components/Footer";
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
       <Section />
       <Navigate />
 
-      <Footer />
       <MainMenu />
     </div>
   );

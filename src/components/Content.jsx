@@ -13,11 +13,9 @@ function Content({ tab }) {
         setData(data[tab]);
         setIsLoading(false);
       })
-
       .catch((error) => error.message);
   }, [tab]);
 
-  console.log(data);
   return (
     <div>
       {data.length > 0 ? (
